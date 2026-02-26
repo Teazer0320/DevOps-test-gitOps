@@ -16,7 +16,6 @@ spec:
     spec:
       containers:
       - name: cpp-hello-world
-        # IMPORTANT: Replace 'your-username' with your actual Docker Hub username
-        image: your-username/devops-test-service:latest
+        image: teazer/devops-test-service:latest
         ports:
         - containerPort: 80
