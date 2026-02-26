@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cpp-service-deployment
+  labels:
+    app: cpp-service
+spec:
+  replicas: 2 # Standard for high availability
+  selector:
+    matchLabels:
+      app: cpp-service
+  template:
+    metadata:
+      labels:
+        app: cpp-service
+    spec:
+      containers:
+      - name: cpp-hello-world
+        # IMPORTANT: Replace 'your-username' with your actual Docker Hub username
+        image: your-username/devops-test-service:latest
+        ports:
+        - containerPort: 80

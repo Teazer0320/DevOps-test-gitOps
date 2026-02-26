@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cpp-service-lb
+spec:
+  type: LoadBalancer # Expose the service to the internet
+  selector:
+    app: cpp-service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
