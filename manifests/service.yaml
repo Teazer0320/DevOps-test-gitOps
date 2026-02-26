@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: cpp-service-lb
+  name: devops-test-service-lb
 spec:
-  type: LoadBalancer # Expose the service to the internet
+  type: LoadBalancer
   selector:
-    app: cpp-service
+    app: devops-test-service
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 80
+      targetPort: 8080

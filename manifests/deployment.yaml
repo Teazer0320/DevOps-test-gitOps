@@ -1,21 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cpp-service-deployment
-  labels:
-    app: cpp-service
+  name: devops-test-service-deployment
 spec:
-  replicas: 2 # Standard for high availability
+  replicas: 1
   selector:
     matchLabels:
-      app: cpp-service
+      app: devops-test-service
   template:
     metadata:
       labels:
-        app: cpp-service
+        app: devops-test-service
     spec:
       containers:
-      - name: cpp-hello-world
+      - name: devops-test-service
         image: teazer/devops-test-service:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
