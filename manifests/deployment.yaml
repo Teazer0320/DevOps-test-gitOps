@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: devops-test-service
-        image: teazer/devops-test-service:latest
+        image: teazer/devops-test-service:5f5a638
         ports:
         - containerPort: 8080
